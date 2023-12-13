@@ -40,3 +40,4 @@ void initialize_lexer(const char *code);
 Token get_next_token();
 
 #endif
+
