@@ -1,8 +1,10 @@
+// parser.h
+
 #ifndef PARSER_H
 #define PARSER_H
 
-#include "lexer.h"
+#include "ast.h"
 
-void parse_program();
+void parse(const char *code);
 
 #endif

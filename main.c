@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "lexer.h"
+#include "parser.h"
 
 int main()
 {
@@ -31,6 +32,15 @@ int main()
             printf("Unknown Token\n");
         }
     } while (token.type != END_OF_FILE);
+
+    // Include parser.h file
+    AstNode *ast = parse_program();
+
+    // Include interpreter.h file
+    interpret(ast);
+
+    // Free ast and perform other cleanup functions.
+    free_ast(ast);
 
     return 0;
 }

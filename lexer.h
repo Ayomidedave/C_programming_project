@@ -24,6 +24,8 @@ typedef enum
     AUTHENTICATE,
     IDENTIFIER,
     END_OF_FILE,
+    STRING_LITERAL,
+    NUMBER_LITERAL,
     INVALID_TOKEN
 } TokenType;
 
@@ -40,4 +42,3 @@ void initialize_lexer(const char *code);
 Token get_next_token();
 
 #endif
-
